@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="应用层,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="应用层常见协议1.TelnetTelnet 是这些协议中的变色龙，专司终端模拟。它让远程客户端机器( Telnet 客户端)的用户能 够访问另一台机器( Telnet服务器)的资源。为此， Telnet在 Telnet服务器上耍花招，让客户端机器看 起来像是与本地网络直接相连的终端。这实际上是使用软件营造的假象一一可与选定的远程主机交互 的虚拟终端。 这些模拟终端使用文本模式，可执行指定的操作，如">
+<meta name="keywords" content="应用层">
+<meta property="og:type" content="article">
+<meta property="og:title" content="应用层常见协议">
+<meta property="og:url" content="http://yoursite.com/2019/08/18/应用层常见协议/index.html">
+<meta property="og:site_name" content="biubiubiu~~~">
+<meta property="og:description" content="应用层常见协议1.TelnetTelnet 是这些协议中的变色龙，专司终端模拟。它让远程客户端机器( Telnet 客户端)的用户能 够访问另一台机器( Telnet服务器)的资源。为此， Telnet在 Telnet服务器上耍花招，让客户端机器看 起来像是与本地网络直接相连的终端。这实际上是使用软件营造的假象一一可与选定的远程主机交互 的虚拟终端。 这些模拟终端使用文本模式，可执行指定的操作，如">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-18T14:58:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="应用层常见协议">
+<meta name="twitter:description" content="应用层常见协议1.TelnetTelnet 是这些协议中的变色龙，专司终端模拟。它让远程客户端机器( Telnet 客户端)的用户能 够访问另一台机器( Telnet服务器)的资源。为此， Telnet在 Telnet服务器上耍花招，让客户端机器看 起来像是与本地网络直接相连的终端。这实际上是使用软件营造的假象一一可与选定的远程主机交互 的虚拟终端。 这些模拟终端使用文本模式，可执行指定的操作，如">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"Sidebar Position, available value":"left | right (only for Pisces | Gemini).","position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/08/18/应用层常见协议/">
+
+
+
+
+
+  <title>应用层常见协议 | biubiubiu~~~</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">biubiubiu~~~</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/18/应用层常见协议/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liangxu Huang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="biubiubiu~~~">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">应用层常见协议</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-18T22:59:04+08:00">
+                2019-08-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机网络</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="应用层常见协议"><a href="#应用层常见协议" class="headerlink" title="应用层常见协议"></a>应用层常见协议</h1><h2 id="1-Telnet"><a href="#1-Telnet" class="headerlink" title="1.Telnet"></a>1.Telnet</h2><p>Telnet 是这些协议中的变色龙，专司终端模拟。它让远程客户端机器( Telnet 客户端)的用户能 够访问另一台机器( Telnet服务器)的资源。为此， Telnet在 Telnet服务器上耍花招，让客户端机器看 起来像是与本地网络直接相连的终端。这实际上是使用软件营造的假象一一可与选定的远程主机交互 的虚拟终端。 这些模拟终端使用文本模式，可执行指定的操作，如显示菜单，让用户能够选择选项以及访问服 务器的应用程序。要建立 Telnet会话，用户首先运行 Telnet客户端软件，然后登录 Telnet服务器o</p>
+<h2 id="2-FTP"><a href="#2-FTP" class="headerlink" title="2.FTP"></a>2.FTP</h2><p>FTP ( File Transfer Protocol，文件传输协议)让你能够传输文件，这可在任何两台使用它的机器之 间进行。然而， FTP 不仅仅是协议，还是程序。作为协议， FTP 供应用程序使用;作为程序， FTP 供 用户手工执行与文件相关的任务。 FTP让你能够访问目录和文件以及执行某些类型的目录操作，如将 其移到其他目录中。 通过 FTP 访问主机只是第一步，随后用户必须通过身份验证登录，因为系统管理员可能使用密码 和用户名来限制访问。要避开这种身份验证，可使用用户名 anonymo邸，但这样获得的访问权将受到 限制。 即使被用户用作程序， FTP 的功能也仅限于列出和操作目录、输入文件内容以及在主机之间复制 文件，而不能远程执行程序。</p>
+<h2 id="3-TFTP"><a href="#3-TFTP" class="headerlink" title="3.TFTP"></a>3.TFTP</h2><p>TFTP ( Trivial File Transfer Protocol，简单文件传输协议)是 FTP 的简化版，但如果你知道自己要 什么以及到哪里去寻找，也可使用它。另外，它使用起来非常简单，速度也很快。然而，它提供的功 能没有 FTP 丰富。 TFTP 没有提供目录浏览功能，除发送和接收文件外什么也不能做。这个紧凑的小 协议的开销很小，它发送的数据块比 FTP发送的小得多，也不像 FTP那样需要进行身份验证，因此更 不安全。鉴于这种固有的安全风险，支持它的网站很少。 </p>
+<h2 id="4-NFS"><a href="#4-NFS" class="headerlink" title="4.NFS"></a>4.NFS</h2><p>NFS (NetworkFile System，网络文件系统)是一种致力于文件共享的协议，让两种不同的文件系 统能够互操作。其工作原理大致如下:假设 NFS服务器端软件运行在 Windows服务器上，而 NFS 客户端软件运行在 Unix 主机上， NFS让 Windows服务器的部分 RAM看起来像存储的是 Unix文件，可 被 Unix用户使用。虽然 Windows文件系统和 Unix文件系统不同一一它们在是否区分大小写、文件名 长度、安全性等方面不同，但 Unix用户和 Windows用户可像通常那样访问相同的文件，就像文件位 于他们通常使用的文件系统中一样。</p>
+<h2 id="5-SMTP"><a href="#5-SMTP" class="headerlink" title="5.SMTP"></a>5.SMTP</h2><p>SMTP ( SimpleMail Transfer Protocol，简单邮件传输协议)解决了无处不在的邮件收发需求，它 使用假脱机(排队)的方式传递邮件。邮件到达目的地后，将被存储到设备(通常是磁盘)中。目标 端的服务器软件定期检查队列，看其中是否有邮件。发现邮件后，它将把它们投递给收件人。 SMTP 用于发送电子邮件，而 POP3 或 IMAP用于接收邮件。 </p>
+<h2 id="6-POP"><a href="#6-POP" class="headerlink" title="6.POP"></a>6.POP</h2><p>POP (Post Office Protocol，邮局协议)提供了一种对到来邮件进行存储的机制，其最新版本为 POP3o 这种协议的工作原理如下:客户端设备连接到U POP3 服务器后，可下载发送给它的邮件。它 不允许选择性地下载邮件，但邮件下载后，客户端/服务器交互就结束了，用户可在本地随意删除和 操作邮件。接下来将介绍一种更新的标准一-IMAP，它正逐渐取代 POP3 ，这是什么原因呢? </p>
+<h2 id="7-IMAP4"><a href="#7-IMAP4" class="headerlink" title="7.IMAP4"></a>7.IMAP4</h2><p>由于 lMAP4 (Internet Message Access Proωcol，因特网消息访问协议)让你能够控制邮件的下载 方式，因此使用它可获得亟需的安全性。它让你能够查看邮件头或下载邮件的一部分一一你可以咬住 鱼饵，而不是将其整个吞下，进而被藏在鱼饵中的鱼钩钩住。 使用 IMAP 时，你可选择将邮件以层次方式存储在电子邮件服务器中，并链接到文档和用户组。 lMAP 甚至提供了搜索命令，让你能够根据主题、邮件头或内容搜索邮件。可以想见，它提供了一些 身份验证功能一一实际上它支持 MIT开发的 Kerberos 身份验证方案。 lMAP4是最新的版本。 </p>
+<h2 id="8-TLS"><a href="#8-TLS" class="headerlink" title="8.TLS"></a>8.TLS</h2><p>TLS (Transport Layer S白山坷，传输层安全)及其前身 SSL ( Secure Sockets Layer，安全套接字 层)都是加密协议，非常适合用于确保在线数据传输的安全，如 Web浏览、即时通信、因特阿传真等。</p>
+<h2 id="9-SIP-VoIP"><a href="#9-SIP-VoIP" class="headerlink" title="9.SIP (VoIP)"></a>9.SIP (VoIP)</h2><p>SIP (Session lnitiation Protocol，会话发起协议)是一种非常流行的信令胁议，用于建立和拆除多 媒体通信会话，其应用非常广泛，可用于因特网上的语音和视频呼叫、视频会议、流媒体分发、即时 通信、状态信息( presence infonnation )、在线游戏等。</p>
+<h2 id="10-RTP-VoIP"><a href="#10-RTP-VoIP" class="headerlink" title="10.RTP (VoIP)"></a>10.RTP (VoIP)</h2><p>实时传输协议是一种分组格式标准，用于通过因特网传输语音和视频。 虽然它最初被设计为一种组播协议，但现在也被用于单播应用程序中。它常被用于流式 媒体、视频会议和一键通( push to talk )系统，这使其成了 VoIP (Voice over IP，IP语音)行业的事 实标准。 </p>
+<h2 id="11-LDP"><a href="#11-LDP" class="headerlink" title="11.LDP"></a>11.LDP</h2><p>LDP ( Line Printer Daemon，行式打印机守护进程)协议设计用于共享打印机。 LPD和 LPR (Line Printer，行式打印机)程序相互协作，使得能够将打印作业排队并使用 TCPIIP将其发送给网络打印机。 </p>
+<h2 id="12-X-Window"><a href="#12-X-Window" class="headerlink" title="12.X Window"></a>12.X Window</h2><p>XWindow是为客户端/服务器操作设计的， 是一种编写基于 GUI (Graphical User Interface，图形 用户界面)的客户端/服务器应用程序的协议。其基本思想是，让运行在一台计算机上的客户端程序能 够通过窗口服务器显示另一台计算机的内容。 </p>
+<h2 id="13-SNMP"><a href="#13-SNMP" class="headerlink" title="13.SNMP"></a>13.SNMP</h2><p>SNMP (Simple Network Management Prot∞01，简单网络管理协议)收集并操作有价值的网络信 息。它运行在管理工作站上，定期或随机地轮询网络中的设备，要求它们暴露特定的信息，以收集数 据。在一切正常的情况下， SNMP将收到基线 (baseline) 信息， 即描述健康网络运行特征的报告。 该 协议还可充当网络的看门狗，将任何突发事件迅速告知管理员。 这些网络看门狗称为代理，出现异常 情况时，代理将向管理工作站发送称为 trap 的警告。</p>
+<h2 id="14-SSH"><a href="#14-SSH" class="headerlink" title="14.SSH"></a>14.SSH</h2><p>安全外壳 (SSH) 协议通过标准 TCPIIP连接建立安全的 Telnet会话，用于执行如下操作:登录系 统、在远程系统中运行程序以及在系统间传输文件等。它在执行这些操作时都使用健壮的加密连接。 你可将其视为用于替代 rsh、 rlogin 甚至 Telnet 的新一代协议。 </p>
+<h2 id="15-HTTP"><a href="#15-HTTP" class="headerlink" title="15.HTTP"></a>15.HTTP</h2><p>所有出色的网站都会包含图像、文本、链接等，这一切都是拜 HTTP ( Hypertext Transfer Protocol, 超文本传输协议)所赐。 它用于管理 Web 浏览器和 Web 服务器之间的通信，在你单击链接时打开相 应的资源，而不管该资源实际位于何地。</p>
+<h2 id="16-HTTPS"><a href="#16-HTTPS" class="headerlink" title="16.HTTPS"></a>16.HTTPS</h2><p>HTTPS(Hyp巳rtextTransfer Protoco1 Secure ，安全超文本传输协议)使用 SSL ( Secure Socket Layer , 安全套接字层)，有时也称为 SHTTP 或 S-HTTP( 这是一个 HTTP扩展，不使用 SSL )，但这无关紧要。 顾名思义，它是安全版盯TP，提供了一系列安全工具，可确保 Web 浏览器和 Web 服务器之间的通信 安全。当你在网上预订或购物时，浏览器需要使用它来填写表格、签名、验证和加密 HTTP 消息。 </p>
+<h2 id="17-NTP"><a href="#17-NTP" class="headerlink" title="17.NTP"></a>17.NTP</h2><p>NTP (Network Time Protoco1，网络时间协议)用于将计算机时钟与标准时间源(通常是原子钟) 同步，由特拉华大学的 DavidMills 教授开发o NTP将设备同步，确保给定网络中所有计算机的时间一 致。这虽然昕起来非常简单，但却非常重要，因为当今的很多交易都需要指出时间和日期。想想你的 数据库吧，如果服务器不与相连的计算机同步，哪怕只相差几秒，也会带来严重的混乱(甚至崩溃)。 如果某台机器在凌晨 1:50 发起交易，而服务器将交易时间记录为 1:45 ，交易将无法完成。因此， NTP 可避免因”没有 De10rean①就回到未来”而导致网络崩费，这点确实非常重要。 </p>
+<h2 id="18-NNTP"><a href="#18-NNTP" class="headerlink" title="18.NNTP"></a>18.NNTP</h2><p>NNTP (Net明明kNews TransferProtoco1，网络新闻传输协议)用于访问 Usenet新闻服务器，这种 服务器存储了大量称为新闻组的留言板。你可能知道，这些新闻组可以是任何有特定兴趣的人群。例 如，如果你是某款经典车型的发烧友或 WWII飞机爱好者很可能有大量基于这些兴趣爱好的新闻组 供你加入。 NNTP 是在盯C977 中定义的。鉴于新闻阅读器程序的配置非常复杂，我们通常依靠很多 网站(甚至搜索引擎)来访问各种资源。 </p>
+<h2 id="19-SCP"><a href="#19-SCP" class="headerlink" title="19.SCP"></a>19.SCP</h2><p>FTP很好，它易于使用，是一种用户友好型文件传输方式一一前提是你不需要安全地传输这些文 件。这是因为使用 FTP 传输数据时，将随文件请求以明文方式发送用户名和密码，根本没有加密，任 何人都能看到。这就像绝境中的孤注一掷，你只是将信息发送出去，并析祷信息不要被坏人拦截。 在这样的场合， SCP ( Secure Copy Protoco1，安全复制协议)可提供帮助，它通过 SSH保护你金 贵的文件。它首先在发送主机和接收主机之间建立一条安全的加密连接，并一直保持这种状态，直到 文件传输完毕。有了 SCP，你孤注一掷抛出的球将只能被目标接收方获得!然而，在当今的网络中， 更健壮的 SFTP 比 SCP 更常用。 </p>
+<h2 id="20-LDAP"><a href="#20-LDAP" class="headerlink" title="20.LDAP"></a>20.LDAP</h2><p>如果管理的网络规模适当，你很可能会在某个地方存储目录，记录所有的网络资源，如设备和用 户。但如何访问这些目录呢?通过 LDAP (Lightweight Directory Access Protocol，轻量级目录访问协 议)。该协议对如何访问目录进行了标准化，其第 l 版和第 2 版分别是在盯C 1487 和盯C 1777 中定 义的。这两个版本存在一些缺陷，为解决这些问题，人们开发了第 3 版 LDAP (当前最常用的版本)， 这是在盯C3377 中定义的。</p>
+<h2 id="21-IGMP"><a href="#21-IGMP" class="headerlink" title="21.IGMP"></a>21.IGMP</h2><p>IGMP (Internet Group Management Protocol，因特网组管理协议)是一种用于管理 IP组播会话的 TCPIIP 协议，它这样完成其职责:通过网络发送唯一的 IGMP 消息，以揭示组播组信息，并找出主机 所属的组播组。 E 网络中的主机也使用 IGMP 消息来加入和退出组播组。 IGMP 消息非常方便用于跟 踪组成员关系以及激活组播流。 </p>
+<h2 id="22-LPR"><a href="#22-LPR" class="headerlink" title="22.LPR"></a>22.LPR</h2><p>在纯粹的 TCP/IP 环境中打印时，人们通常结合使用 LPR (行式打印机)和 LPD (Line Printer Daemon，行式打印机守护进程)来完成打印作业。 LPD 安装在所有打印设备上，负责处理打印机和 打印作业。 LPR 运行于客户端(发送主机)，用于将数据从主机发送到网络打印资掘，让你能够得到 打印输出。 </p>
+<h2 id="23-DNS"><a href="#23-DNS" class="headerlink" title="23.DNS"></a>23.DNS</h2><p>DNS ( Domain Name Serv肘，域名服务)解析主机名，具体地说是因特网名称，如 <a href="http://www.routersim" target="_blank" rel="noopener">www.routersim</a>. com。你并非一定要使用 DNS ，可只输入要与之通信的设备的 IP 地址。 IP 地址表示网络和因特网中 的主机，然而， DNS 旨在让我们的生活更便捷。想想下面这种情形:如果要将网页移到另一家服务提 供商，结果将如何呢? IP 地址将改变，但没有人知道新的 IP 地址。 DNS 让你能够使用域名指定 IP 地 址，你可以随时修改 IP 地址，而不会有人感觉到有何不同。DNS 用于解析 FQDN (Fully Qualified Domain Name ，全限定域名)，如 <a href="http://www.lammle.com" target="_blank" rel="noopener">www.lammle.com</a> 或 todd.lamm1e.como FQDN是一种层次结构，可根据域名标识符查找系统。 如果要解析名称 ωdd，则要么输FQDNωdd.lammle.com，要么让设备(如 PC 或路由器)帮助 你添加后级。例如，在思科路由器中，你可使用命令 ip domain-name lammle.com 给每个请求加上 域名 lamrr由.com。如果不这样做，则你必须输入 FQDN，这样 DNS 才能对名称进行解析。</p>
+<h2 id="24-DHCP-BootP"><a href="#24-DHCP-BootP" class="headerlink" title="24.DHCP/BootP"></a>24.DHCP/BootP</h2><p>DHCP ( Dynamic Host Configuration Protocol，动态主机配置协议)给主机分配 IP 地址，让管理工 作更轻松，非常适合用于各种规模的网络。各种类型的硬件都可用作 DHCP服务器，包括思科路由器。 DHCP 与 BootP (Bootstrap Protocol，自举协议)的差别在于， BootP 给主机分配田地址，但必须 手工将主机的硬件地址输入到 BootP表中。你可将 DHCP 视为动态的 BootP。但别忘了， BootP也可 用于发送操作系统，让主机使用它启动，而 DHCP 没有这样的功能。 主机向 DHCP 服务器请求 IP 地址时， DHCP 服务器可将大量信息提供给主机。下面是 DHCP 服 务器可提供的信息列表:  </p>
+<ul>
+<li>IP 地址; 日子网掩码: </li>
+<li>域名; </li>
+<li>默认网关(路由器); </li>
+<li>DNS 服务器的地址: </li>
+<li>WINS 服务器的地址。</li>
+</ul>
+<h2 id="25-APIPA"><a href="#25-APIPA" class="headerlink" title="25.APIPA"></a>25.APIPA</h2><p>如果一台交换机或集线器连接了多台主机，且没有 DHCP 服务器，该如何办呢?你可手工添加 IP 信息(称为静态 IP 编址)，但 Windows 提供了 APIPA (Automatic Private IP Addressing，自动私有 IP 编址)，这种功能只有较新的 Windows操作系统才有。有了 APIPA，客户端可在 DHCP 服务器不可用 时自动给自己配置 IP 地址和子网掩码(主机用来通信的基本 IP 信息 )0 APIPA使用的 E 地址范围为 169.254.0.1-169.254.255.254，客户端还会给自己配置默认的 B类子网掩码一255.255.0.0。 然而，如果在有 DHCP 服务器的公司网络中，主机使用了该范围内的 E 地址，则表明要么主机 的 DHCP 客户端不正常，要么服务器停止运行了或因网络问题而不可达。在我认识的人当中，还没有 谁在看到主机使用该范围内的 E 地址后还感到高兴的。 下面来看看传输层，即 DoD模型中的主机到主机层。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/应用层/" rel="tag"># 应用层</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/18/CISCO交换机备份和恢复配置文件/" rel="next" title="CISCO交换机备份和恢复配置文件的方法">
+                <i class="fa fa-chevron-left"></i> CISCO交换机备份和恢复配置文件的方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Liangxu Huang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#应用层常见协议"><span class="nav-number">1.</span> <span class="nav-text">应用层常见协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Telnet"><span class="nav-number">1.1.</span> <span class="nav-text">1.Telnet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-FTP"><span class="nav-number">1.2.</span> <span class="nav-text">2.FTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-TFTP"><span class="nav-number">1.3.</span> <span class="nav-text">3.TFTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-NFS"><span class="nav-number">1.4.</span> <span class="nav-text">4.NFS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-SMTP"><span class="nav-number">1.5.</span> <span class="nav-text">5.SMTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-POP"><span class="nav-number">1.6.</span> <span class="nav-text">6.POP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-IMAP4"><span class="nav-number">1.7.</span> <span class="nav-text">7.IMAP4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-TLS"><span class="nav-number">1.8.</span> <span class="nav-text">8.TLS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-SIP-VoIP"><span class="nav-number">1.9.</span> <span class="nav-text">9.SIP (VoIP)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-RTP-VoIP"><span class="nav-number">1.10.</span> <span class="nav-text">10.RTP (VoIP)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-LDP"><span class="nav-number">1.11.</span> <span class="nav-text">11.LDP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-X-Window"><span class="nav-number">1.12.</span> <span class="nav-text">12.X Window</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-SNMP"><span class="nav-number">1.13.</span> <span class="nav-text">13.SNMP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-SSH"><span class="nav-number">1.14.</span> <span class="nav-text">14.SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-HTTP"><span class="nav-number">1.15.</span> <span class="nav-text">15.HTTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-HTTPS"><span class="nav-number">1.16.</span> <span class="nav-text">16.HTTPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-NTP"><span class="nav-number">1.17.</span> <span class="nav-text">17.NTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-NNTP"><span class="nav-number">1.18.</span> <span class="nav-text">18.NNTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-SCP"><span class="nav-number">1.19.</span> <span class="nav-text">19.SCP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-LDAP"><span class="nav-number">1.20.</span> <span class="nav-text">20.LDAP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21-IGMP"><span class="nav-number">1.21.</span> <span class="nav-text">21.IGMP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-LPR"><span class="nav-number">1.22.</span> <span class="nav-text">22.LPR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23-DNS"><span class="nav-number">1.23.</span> <span class="nav-text">23.DNS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24-DHCP-BootP"><span class="nav-number">1.24.</span> <span class="nav-text">24.DHCP/BootP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25-APIPA"><span class="nav-number">1.25.</span> <span class="nav-text">25.APIPA</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Liangxu Huang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+</body>
+</html>
